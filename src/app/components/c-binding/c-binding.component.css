@@ -1,0 +1,14 @@
+h2{
+  text-align: center;
+  color: blueviolet;
+}
+.textColor{
+  color: green
+}
+.textSize{
+  font-size: 40px;
+}
+.textStyle{
+  font-style: italic;
+}
+
