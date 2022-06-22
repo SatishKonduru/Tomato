@@ -8,6 +8,9 @@ import { TestComponent } from './components/test/test.component';
 import { InterpolationComponent } from './components/interpolation/interpolation.component';
 import { PBindingComponent } from './components/p-binding/p-binding.component';
 import { CBindingComponent } from './components/c-binding/c-binding.component';
+import { SBindingComponent } from './components/s-binding/s-binding.component';
+import { EBindingComponent } from './components/e-binding/e-binding.component';
+import { MaterialModule } from './modules/material/material.module';
 
 @NgModule({
   declarations: [
@@ -15,12 +18,15 @@ import { CBindingComponent } from './components/c-binding/c-binding.component';
     TestComponent,
     InterpolationComponent,
     PBindingComponent,
-    CBindingComponent
+    CBindingComponent,
+    SBindingComponent,
+    EBindingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
