@@ -1,0 +1,18 @@
+<h2>Structural Directive : If </h2>
+<br><hr>
+<!-- <h2 *ngIf="check ; else eBlock">True Block</h2> -->
+<h2 *ngIf="check ;then tBlock else eBlock"></h2>
+<ng-template #eBlock>
+  <h2>False Block</h2>
+</ng-template>
+
+<ng-template #tBlock>
+  <h3>True block 1</h3>
+  <h3>True block 2</h3>
+  <h3>True block 3</h3>
+  <h3>True block 4</h3>
+</ng-template>
+
+<h2>heading 2</h2>
+<h2>heading 3</h2>
+

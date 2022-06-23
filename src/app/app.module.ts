@@ -11,6 +11,10 @@ import { CBindingComponent } from './components/c-binding/c-binding.component';
 import { SBindingComponent } from './components/s-binding/s-binding.component';
 import { EBindingComponent } from './components/e-binding/e-binding.component';
 import { MaterialModule } from './modules/material/material.module';
+import { RVariablesComponent } from './components/r-variables/r-variables.component';
+import { TwoWayDataBindingComponent } from './components/two-way-data-binding/two-way-data-binding.component';
+import { FormsModule } from '@angular/forms';
+import { IfComponent } from './components/if/if.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +24,17 @@ import { MaterialModule } from './modules/material/material.module';
     PBindingComponent,
     CBindingComponent,
     SBindingComponent,
-    EBindingComponent
+    EBindingComponent,
+    RVariablesComponent,
+    TwoWayDataBindingComponent,
+    IfComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
