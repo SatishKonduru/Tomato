@@ -15,6 +15,8 @@ import { RVariablesComponent } from './components/r-variables/r-variables.compon
 import { TwoWayDataBindingComponent } from './components/two-way-data-binding/two-way-data-binding.component';
 import { FormsModule } from '@angular/forms';
 import { IfComponent } from './components/if/if.component';
+import { SwitchComponent } from './components/switch/switch.component';
+import { ForComponent } from './components/for/for.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { IfComponent } from './components/if/if.component';
     EBindingComponent,
     RVariablesComponent,
     TwoWayDataBindingComponent,
-    IfComponent
+    IfComponent,
+    SwitchComponent,
+    ForComponent
   ],
   imports: [
     BrowserModule,
