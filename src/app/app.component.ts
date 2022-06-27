@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Simulation of ZOMATO with Tomato';
+  parentMsg = "Hi This message is from Parent (APP/Root)"
+  public inComingMessage;
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-e-binding',
@@ -7,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EBindingComponent implements OnInit {
 
+  @Input() public abc;
   constructor() { }
 public msg = 'Click this Button'
+
   ngOnInit(): void {
   }
   onClick(){

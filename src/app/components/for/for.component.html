@@ -22,9 +22,11 @@
 <!-- <h2 *ngFor="let x of emp | keyvalue ">
   {{x.key}} -- {{x.value}}
 </h2> -->
-<h2 *ngFor="let x of emp">
-  <h3 *ngFor="let y of x | keyvalue">
-      {{y.key}} -- {{y.value}}
-  </h3>
+<h2 *ngFor="let x of emp ">
+  <h2 *ngFor="let y of x | keyvalue">
+    {{y.key}} -- {{y.value}}
+  </h2>
+
+
   <hr>
 </h2>
