@@ -18,6 +18,7 @@ import { IfComponent } from './components/if/if.component';
 import { SwitchComponent } from './components/switch/switch.component';
 import { ForComponent } from './components/for/for.component';
 import { ChildComponent } from './components/child/child.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ChildComponent } from './components/child/child.component';
     IfComponent,
     SwitchComponent,
     ForComponent,
-    ChildComponent
+    ChildComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
