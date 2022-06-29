@@ -19,6 +19,8 @@ import { SwitchComponent } from './components/switch/switch.component';
 import { ForComponent } from './components/for/for.component';
 import { ChildComponent } from './components/child/child.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { CourseNamesComponent } from './components/course-names/course-names.component';
+import { CourseDetailsComponent } from './components/course-details/course-details.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     SwitchComponent,
     ForComponent,
     ChildComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    CourseNamesComponent,
+    CourseDetailsComponent
   ],
   imports: [
     BrowserModule,
