@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CourseService } from 'src/app/services/course.service';
 
 @Component({
   selector: 'app-course-names',
@@ -7,14 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourseNamesComponent implements OnInit {
 
-  public cNames = [
-    {id: 1, name: 'Angular', fee: 25000},
-    {id: 2, name: 'React', fee: 15000},
-    {id: 3, name: 'Bootstrap', fee: 10000}
-  ]
-  constructor() { }
+  public cNames = []
+  constructor(private _cService: CourseService ) { }
 
   ngOnInit(): void {
+  this.cNames =   this._cService.getCourseDetails()
   }
 
 }

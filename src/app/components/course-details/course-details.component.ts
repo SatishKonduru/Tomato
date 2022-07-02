@@ -1,24 +1,20 @@
 import { Component, OnInit } from '@angular/core';
+import { CourseService } from 'src/app/services/course.service';
 
 @Component({
   selector: 'app-course-details',
   templateUrl: './course-details.component.html',
   styleUrls: ['./course-details.component.css']
+
 })
 export class CourseDetailsComponent implements OnInit {
 
-  public cDetails = [
-    {id: 1, name: 'Angular', fee: 25000},
-    {id: 2, name: 'React', fee: 15000},
-    {id: 3, name: 'Bootstrap', fee: 10000}
+  public cDetails = []
 
-  ]
-
-
-
-  constructor() { }
+  constructor(private _cService : CourseService) { }
 
   ngOnInit(): void {
+   this.cDetails =  this._cService.getCourseDetails()
   }
 
 }
