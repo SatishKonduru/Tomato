@@ -22,7 +22,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { CourseNamesComponent } from './components/course-names/course-names.component';
 import { CourseDetailsComponent } from './components/course-details/course-details.component';
 import { CourseService } from './services/course.service';
-
+import {HttpClientModule} from '@angular/common/http'
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +47,8 @@ import { CourseService } from './services/course.service';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [CourseService],
   bootstrap: [AppComponent]

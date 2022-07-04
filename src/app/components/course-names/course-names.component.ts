@@ -9,10 +9,14 @@ import { CourseService } from 'src/app/services/course.service';
 export class CourseNamesComponent implements OnInit {
 
   public cNames = []
+  public myError = ''
   constructor(private _cService: CourseService ) { }
 
   ngOnInit(): void {
-  this.cNames =   this._cService.getCourseDetails()
+  //this.cNames =   this._cService.getCourseDetails()
+  this._cService.getCourseDetails()
+  .subscribe(res => this.cNames = res,
+    err => this.myError = err)
   }
 
 }
