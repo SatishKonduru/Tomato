@@ -1,5 +1,5 @@
 <h2>Course Details</h2>
-<h3 *ngFor="let x of cDetails">
+<h3 *ngFor="let x of cDetails" (click)="onSelect(x)">
   {{x.id}} -- {{x.name}} -- {{x.fee}}
 </h3>
 <h4>{{serverError}}</h4>

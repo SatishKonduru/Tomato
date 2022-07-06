@@ -4,6 +4,7 @@ import { CourseDetailsComponent } from './components/course-details/course-detai
 import { CourseNamesComponent } from './components/course-names/course-names.component';
 import { IfComponent } from './components/if/if.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { SelectedCourseComponent } from './components/selected-course/selected-course.component';
 import { TestComponent } from './components/test/test.component';
 
 const routes: Routes = [
@@ -29,6 +30,10 @@ const routes: Routes = [
   {
     path: 'courseDetails',
     component: CourseDetailsComponent
+  },
+  {
+    path: 'selectedCourse/:id',
+    component: SelectedCourseComponent
   },
   {
     path: '**',

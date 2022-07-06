@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CourseService } from 'src/app/services/course.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class CourseDetailsComponent implements OnInit {
 
   public cDetails = []
   public serverError = ''
-  constructor(private _cService : CourseService) { }
+  constructor(private _cService : CourseService, private _router: Router) { }
 
   ngOnInit(): void {
    //this.cDetails =  this._cService.getCourseDetails()
@@ -19,4 +20,7 @@ export class CourseDetailsComponent implements OnInit {
     err => this.serverError=err)
   }
 
+  onSelect(x){
+    this._router.navigate(['/selectedCourse', x.id])
+  }
 }
