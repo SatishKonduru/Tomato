@@ -27,4 +27,8 @@ public courseId ;
     let nextId = this.courseId + 1
     this._router.navigate(['/selectedCourse', nextId])
   }
+
+  gotoDetails(){
+    this._router.navigate(['/courseDetails', {id: this.courseId}])
+  }
 }

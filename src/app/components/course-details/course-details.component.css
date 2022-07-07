@@ -2,3 +2,6 @@ h2{
   text-align: center;
   color: blue;
 }
+.selected{
+  background-color: green;
+}

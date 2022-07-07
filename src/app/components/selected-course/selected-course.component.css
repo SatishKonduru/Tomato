@@ -1,0 +1,5 @@
+.mat-my-primary{
+ /* background-color: #000; */
+ background-image: linear-gradient(to right, blue, #000);
+ color: #fff;
+}
