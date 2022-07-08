@@ -20,15 +20,19 @@ public courseId ;
 
   gotoPrevious(){
     let previousID = this.courseId - 1
-    this._router.navigate(['/selectedCourse', previousID])
+   // this._router.navigate(['/selectedCourse', previousID])
+   this._router.navigate(['../',previousID], {relativeTo: this._activatedRoute})
+
   }
 
   gotoNext(){
     let nextId = this.courseId + 1
-    this._router.navigate(['/selectedCourse', nextId])
+   // this._router.navigate(['/selectedCourse', nextId])
+   this._router.navigate(['../',nextId], {relativeTo: this._activatedRoute})
   }
 
   gotoDetails(){
-    this._router.navigate(['/courseDetails', {id: this.courseId}])
+    //this._router.navigate(['/courseDetails', {id: this.courseId}])
+    this._router.navigate(['../', {id: this.courseId}], {relativeTo: this._activatedRoute})
   }
 }

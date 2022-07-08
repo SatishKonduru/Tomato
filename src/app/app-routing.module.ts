@@ -31,8 +31,12 @@ const routes: Routes = [
     path: 'courseDetails',
     component: CourseDetailsComponent
   },
+  // {
+  //   path: 'selectedCourse/:id',
+  //   component: SelectedCourseComponent
+  // },
   {
-    path: 'selectedCourse/:id',
+    path: 'courseDetails/:id',
     component: SelectedCourseComponent
   },
   {

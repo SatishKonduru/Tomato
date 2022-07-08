@@ -26,7 +26,10 @@ export class CourseDetailsComponent implements OnInit {
   }
 
   onSelect(x){
-    this._router.navigate(['/selectedCourse', x.id])
+    // this._router.navigate(['/selectedCourse', x.id])  ==>  //Absolute Navigation
+
+    //the following is Relative Navigation
+    this._router.navigate([x.id],{relativeTo: this._activatedRoute })
   }
   isSelected(x){
   return  x.id === this.selectedId
