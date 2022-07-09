@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CourseDetailsComponent } from './components/course-details/course-details.component';
+import { CourseDurationComponent } from './components/course-duration/course-duration.component';
 import { CourseNamesComponent } from './components/course-names/course-names.component';
+import { CourseTutorComponent } from './components/course-tutor/course-tutor.component';
 import { IfComponent } from './components/if/if.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { SelectedCourseComponent } from './components/selected-course/selected-course.component';
@@ -37,8 +39,20 @@ const routes: Routes = [
   // },
   {
     path: 'courseDetails/:id',
-    component: SelectedCourseComponent
+    component: SelectedCourseComponent,
+    children: [
+      {
+        path:'duration',
+        component: CourseDurationComponent
+      },
+      {
+        path: 'tutor',
+        component: CourseTutorComponent
+      }
+    ]
   },
+  { path: 'faculty', loadChildren: () => import('./modules/faculty/faculty.module').then(m => m.FacultyModule) },
+
   {
     path: '**',
     component: PageNotFoundComponent

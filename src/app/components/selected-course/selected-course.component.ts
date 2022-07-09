@@ -35,4 +35,11 @@ public courseId ;
     //this._router.navigate(['/courseDetails', {id: this.courseId}])
     this._router.navigate(['../', {id: this.courseId}], {relativeTo: this._activatedRoute})
   }
+
+  showDuration(){
+    this._router.navigate(['duration'], {relativeTo: this._activatedRoute})
+  }
+  showTutor(){
+    this._router.navigate(['tutor'],{relativeTo: this._activatedRoute})
+  }
 }

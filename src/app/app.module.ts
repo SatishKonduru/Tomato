@@ -23,7 +23,9 @@ import { CourseNamesComponent } from './components/course-names/course-names.com
 import { CourseDetailsComponent } from './components/course-details/course-details.component';
 import { CourseService } from './services/course.service';
 import {HttpClientModule} from '@angular/common/http';
-import { SelectedCourseComponent } from './components/selected-course/selected-course.component'
+import { SelectedCourseComponent } from './components/selected-course/selected-course.component';
+import { CourseDurationComponent } from './components/course-duration/course-duration.component';
+import { CourseTutorComponent } from './components/course-tutor/course-tutor.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +44,9 @@ import { SelectedCourseComponent } from './components/selected-course/selected-c
     PageNotFoundComponent,
     CourseNamesComponent,
     CourseDetailsComponent,
-    SelectedCourseComponent
+    SelectedCourseComponent,
+    CourseDurationComponent,
+    CourseTutorComponent
   ],
   imports: [
     BrowserModule,
