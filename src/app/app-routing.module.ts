@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BuiltInPipesComponent } from './components/built-in-pipes/built-in-pipes.component';
 import { CourseDetailsComponent } from './components/course-details/course-details.component';
 import { CourseDurationComponent } from './components/course-duration/course-duration.component';
 import { CourseNamesComponent } from './components/course-names/course-names.component';
 import { CourseTutorComponent } from './components/course-tutor/course-tutor.component';
+import { CustomPipeComponent } from './components/custom-pipe/custom-pipe.component';
 import { IfComponent } from './components/if/if.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { SelectedCourseComponent } from './components/selected-course/selected-course.component';
@@ -52,7 +54,14 @@ const routes: Routes = [
     ]
   },
   { path: 'faculty', loadChildren: () => import('./modules/faculty/faculty.module').then(m => m.FacultyModule) },
-
+  {
+    path: 'builtInPipes',
+    component:BuiltInPipesComponent
+  },
+  {
+    path:'customPipe',
+    component: CustomPipeComponent
+  },
   {
     path: '**',
     component: PageNotFoundComponent

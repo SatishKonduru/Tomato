@@ -1,0 +1,13 @@
+<h1>Custom Pipe</h1>
+<hr>
+<div style="text-align: center">
+  <p>
+    <mat-form-field>
+      <mat-label>Course Name:</mat-label>
+      <input matInput #course>
+    </mat-form-field>
+    <button mat-raised-button color="warn" (click)="addCourse(course.value)">Add Course</button>
+  </p>
+</div>
+
+<h2>{{courseName | rskPipe}}</h2>
