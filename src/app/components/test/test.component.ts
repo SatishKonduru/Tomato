@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
+import { share } from 'rxjs/operators';
 
 @Component({
   selector: 'app-test',
@@ -58,6 +59,24 @@ export class TestComponent implements OnInit {
 
 //     this.getData()
 //     this.getData1()
+
+    function getData(data){
+      let counter = 0
+      setInterval( ()=> {
+        console.log("Data: "+ counter)
+        data.next(counter)
+        counter++
+      }, 2000)
+    }//getData ends here....
+    const obs = new Observable(getData)
+    const shared = new Subject()
+    shared.subscribe(v => console.log("Subscription 1 : "+ v))
+    shared.subscribe(v => console.log("Subscription 2 : "+ v))
+    shared.subscribe(v => console.log("Subscription 3 : "+ v))
+    obs.subscribe(shared)
+    // obs.subscribe( v => console.log("Subscription 1:   "+ v))
+    // obs.subscribe(v => console.log("Subscription 2 :   "+ v))
+    // obs.subscribe(v => console.log("Subscription 3 :   "+ v))
 
   }// ngOnInit ends here
 // public course: any = []
