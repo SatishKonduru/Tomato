@@ -28,7 +28,8 @@ import { CourseDurationComponent } from './components/course-duration/course-dur
 import { CourseTutorComponent } from './components/course-tutor/course-tutor.component';
 import { BuiltInPipesComponent } from './components/built-in-pipes/built-in-pipes.component';
 import { CustomPipeComponent } from './components/custom-pipe/custom-pipe.component';
-import { MyPipePipe } from './pipes/my-pipe.pipe'
+import { MyPipePipe } from './pipes/my-pipe.pipe';
+import { ChangeColorDirective } from './customDirctives/change-color.directive'
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +53,8 @@ import { MyPipePipe } from './pipes/my-pipe.pipe'
     CourseTutorComponent,
     BuiltInPipesComponent,
     CustomPipeComponent,
-    MyPipePipe
+    MyPipePipe,
+    ChangeColorDirective
   ],
   imports: [
     BrowserModule,
